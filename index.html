@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEYOND JAMB | Excellence Tutors College | Registration</title>
-    
-    <meta property="og:title" content="BEYOND JAMB WEBINAR | EXCELLENCE TUTORS COLLEGE" />
-    <meta property="og:description" content="Bridge The Gap Between Your JAMB Score and University Admission" />
-    <meta property="og:image" content="https://i.ibb.co/xSCgY7Dw/Adobe-Express-file.png" />
-    <meta property="og:url" content="https://excellencetutors.github.io/beyondjamb/" />
-    <meta property="og:type" content="website" />
-
     <style>
+        /* Modern Web Design Variables */
         :root {
-            --primary-bg: #0a0a0c;
-            --glass-bg: rgba(255, 255, 255, 0.04);
+            --primary-bg: #0a0a0c; /* Deep dark background */
+            --glass-bg: rgba(255, 255, 255, 0.04); /* Sheer glass */
             --text-main: #ffffff;
             --text-muted: #e0e0e0;
-            --gold-accent: #f1c40f;
-            --gold-hover: #f39c12;
-            --glow: 0 0 15px rgba(241, 196, 15, 0.5);
+            --gold-accent: #f1c40f; /* Rich gold */
+            --gold-hover: #f39c12; /* Deeper gold */
+            --glow-gold: 0 0 15px rgba(241, 196, 15, 0.5); /* Heavenly gold glow */
+            --glow-light: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft white glow */
             --border: rgba(255, 255, 255, 0.08);
             --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
+        /* Essential Reset */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
@@ -35,13 +31,17 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            background-image: linear-gradient(rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0.6)), 
-                              url('https://i.ibb.co/QjNL8vM1/1777014430079-3.png');
+            
+            /* --- BACKGROUND & ATMOSPHERE --- */
+            background-image: 
+                linear-gradient(rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0.6)), 
+                url('https://i.ibb.co/QjNL8vM1/1777014430079-3.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
+        /* Floating Heavenly Form Container */
         .form-wrapper {
             background: var(--glass-bg);
             backdrop-filter: blur(25px) saturate(180%);
@@ -52,35 +52,45 @@
             border-radius: 24px;
             border: 1px solid var(--border);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            transition: var(--transition-smooth);
+        }
+        
+        .form-wrapper:hover {
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 30px rgba(241, 196, 15, 0.1);
         }
 
+        /* Premium Header Styling */
         header { text-align: center; margin-bottom: 40px; }
 
-        /* --- BLENDED & GLOWING LOGO --- */
+        /* --- THE FINAL LOGO FIX & BLENDING --- */
         .logo-container {
-            width: 160px;
+            width: 180px; /* Size of your logo */
+            height: auto;
             margin: 0 auto 15px auto;
+            position: relative;
         }
 
         .college-logo-transparent {
             width: 100%;
             height: auto;
             display: block;
-            filter: drop-shadow(0 0 12px rgba(241, 196, 15, 0.6)); /* Heavenly blend */
+            /* This effect recolors the transparent PNG to Gold and adds a soft heavenly blur to blend it */
+            filter: brightness(0) saturate(100%) invert(88%) sepia(26%) saturate(3016%) hue-rotate(352deg) brightness(101%) contrast(101%) drop-shadow(0 0 10px rgba(241, 196, 15, 0.3));
         }
 
-        /* --- BOLDER COLLEGE NAME --- */
+        /* --- EXCELLENCE TUTORS (BOLDER & GLOWING) --- */
         .college-name {
-            font-size: 1.4rem;
+            font-size: 1.5rem; /* Larger and clearer */
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             color: var(--text-main);
-            font-weight: 900; /* Max boldness */
+            font-weight: 800; /* Super bold */
             display: block;
-            margin-bottom: 8px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+            text-shadow: var(--glow-gold); /* Added standard Gold glow for premium feel */
         }
 
+        /* THE BLINKING "presents..." FEATURE */
         @keyframes professionalBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.1; } }
         .presents {
             display: block;
@@ -90,84 +100,140 @@
             letter-spacing: 2px;
             margin-bottom: 15px;
             animation: professionalBlink 2.5s infinite;
+            text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
         }
 
         h1 {
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 12px;
+            letter-spacing: -1px;
             background: linear-gradient(135deg, #ffffff 0%, #f1c40f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
         }
 
-        .tagline { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+        .tagline { font-size: 1.15rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
 
-        /* Form Styling */
+        /* Form Layout */
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
         .form-group { margin-bottom: 25px; text-align: left; }
-        label { display: block; margin-bottom: 10px; font-size: 0.85rem; color: var(--gold-accent); text-transform: uppercase; }
-        input, textarea { width: 100%; padding: 16px; background: rgba(0, 0, 0, 0.5); border: 1px solid var(--border); border-radius: 12px; color: #fff; }
-        input:focus, textarea:focus { outline: none; border-color: var(--gold-accent); box-shadow: var(--glow); }
+        label { display: block; margin-bottom: 10px; font-size: 0.9rem; font-weight: 500; color: var(--gold-accent); text-transform: uppercase; letter-spacing: 1px;}
 
-        .submit-btn {
-            width: 100%; padding: 18px; background: var(--gold-accent); color: #000; border: none; border-radius: 12px;
-            font-size: 1.2rem; font-weight: 700; cursor: pointer; text-transform: uppercase; margin-top: 15px;
+        /* Premium Input Styling */
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%; padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.5); border: 1px solid var(--border); border-radius: 12px;
+            color: var(--text-main); font-size: 1.05rem; transition: var(--transition-smooth);
         }
 
-        /* Modal */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(10px); }
-        .modal-overlay.active { display: flex; }
-        .modal-content { background: #111; padding: 40px; border-radius: 20px; text-align: center; border: 1px solid var(--gold-accent); }
-        .whatsapp-btn { display: inline-block; padding: 16px 30px; background: #25D366; color: white; text-decoration: none; border-radius: 50px; font-weight: 700; margin-top: 20px; }
+        /* Interactive Focus Effects (The Heavenly Glow) */
+        input:focus, textarea:focus {
+            outline: none; background: rgba(0, 0, 0, 0.7); border-color: var(--gold-accent);
+            box-shadow: var(--glow-gold); transform: translateY(-2px);
+        }
+        input:hover, textarea:hover { border-color: rgba(255, 255, 255, 0.3); }
+        textarea { resize: vertical; min-height: 80px; }
 
-        @media (max-width: 768px) { .input-row { grid-template-columns: 1fr; gap: 0; } h1 { font-size: 2.2rem; } .college-name { font-size: 1.1rem; } }
+        /* Submit Button */
+        .submit-btn {
+            width: 100%; padding: 18px;
+            background: var(--gold-accent); color: #000;
+            border: none; border-radius: 12px; font-size: 1.2rem; font-weight: 700;
+            cursor: pointer; transition: var(--transition-smooth); text-transform: uppercase; letter-spacing: 2px;
+            margin-top: 15px; box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+        }
+        .submit-btn:hover { background: var(--gold-hover); transform: scale(1.02); box-shadow: 0 8px 25px rgba(241, 196, 15, 0.5); }
+        .submit-btn:active { transform: scale(0.99) translateY(2px); }
+
+        /* Success Modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95); display: flex; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition-smooth); backdrop-filter: blur(15px);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content {
+            background: #111; padding: 50px; border-radius: 20px; text-align: center;
+            max-width: 500px; width: 90%; border: 1px solid var(--gold-accent);
+            transform: scale(0.8) translateY(30px); transition: var(--transition-smooth); box-shadow: var(--glow-gold);
+        }
+        .modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
+        .modal-content h3 { color: var(--gold-accent); font-size: 1.8rem; margin-bottom: 20px; font-weight: 800; }
+        .modal-content p { margin-bottom: 30px; color: var(--text-main); font-size: 1.1rem; }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block; padding: 16px 35px; background: #25D366;
+            color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem;
+            transition: var(--transition-smooth); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); text-transform: uppercase;
+        }
+        .whatsapp-btn:hover { background: #1da851; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5); }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .form-wrapper { padding: 30px 20px; }
+            .input-row { grid-template-columns: 1fr; gap: 0; }
+            h1 { font-size: 2.2rem; }
+            .college-name { letter-spacing: 2px; font-size: 1.1rem; }
+            .logo-container { width: 140px; }
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="form-wrapper">
         <header>
             <div class="logo-container">
-                <img src="https://i.ibb.co/xSCgY7Dw/Adobe-Express-file.png" alt="Logo" class="college-logo-transparent">
+                <img src="https://i.ibb.co/xSCgY7Dw/Adobe-Express-file.png" alt="Excellence Tutors College Logo" class="college-logo-transparent">
             </div>
+            
             <span class="college-name">Excellence Tutors College</span>
             <span class="presents">presents...</span>
             <h1>BEYOND JAMB</h1>
-            <p class="tagline">Bridge the gap between your scores and university admission.</p>
+            <p class="tagline">A Webinar Session Designed To Bridge The Gap Between Your Scores And University Admission.</p>
         </header>
 
         <form id="webinarForm">
-            <div class="form-group"><label>Full Name</label><input type="text" required></div>
-            <div class="input-row">
-                <div class="form-group"><label>Email Address</label><input type="email" required></div>
-                <div class="form-group"><label>WhatsApp Number</label><input type="tel" required></div>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your complete name" required>
             </div>
+
             <div class="input-row">
-                <div class="form-group"><label>Course of Choice</label><input type="text" required></div>
-                <div class="form-group"><label>School of Choice</label><input type="text" required></div>
+                <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="example@mail.com" required></div>
+                <div class="form-group"><label for="phone">WhatsApp Number</label><input type="tel" id="phone" placeholder="08012345678" required pattern="[0-9]{10,14}"></div>
             </div>
+
+            <div class="input-row">
+                <div class="form-group"><label for="course">Course of Choice</label><input type="text" id="course" placeholder="e.g., Law" required></div>
+                <div class="form-group"><label for="school">School of Choice</label><input type="text" id="school" placeholder="e.g., OAU" required></div>
+            </div>
+
             <button type="submit" class="submit-btn">Secure My Seat</button>
         </form>
     </div>
 
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
-            <h3 style="color: var(--gold-accent); font-size: 1.8rem;">Congratulations!</h3>
-            <p style="color: white; margin: 15px 0;">Your registration is complete.</p>
-            <a href="https://chat.whatsapp.com/C7Kt7Mf5Cs383C8imodLat" class="whatsapp-btn">Join WhatsApp Group</a>
+            <h3>Congratulations!</h3>
+            <p>Your registration is complete. We are excited to help you move Beyond JAMB.</p>
+            <p><strong>Crucial Step:</strong> Join the official webinar WhatsApp group now for exclusive links and details.</p>
+            <a href="https://chat.whatsapp.com/C7Kt7Mf5Cs383C8imodLat" class="whatsapp-btn" target="_blank">Connect on WhatsApp</a>
         </div>
     </div>
 
     <script>
         document.getElementById('webinarForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('modalOverlay').classList.add('active');
+            e.preventDefault(); // Prevents refresh
+            document.getElementById('modalOverlay').classList.add('active'); // Opens success modal
         });
+
+        // Close modal if user clicks outside content
         document.getElementById('modalOverlay').addEventListener('click', function(e) {
-            if (e.target === this) this.classList.remove('active');
+            if (e.target === this) { this.classList.remove('active'); }
         });
     </script>
 </body>
