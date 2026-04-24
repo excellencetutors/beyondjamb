@@ -61,18 +61,52 @@
         header { text-align: center; margin-bottom: 30px; }
         .logo-container { width: 130px; margin: 0 auto 15px auto; }
         .college-logo-transparent { width: 100%; filter: drop-shadow(0 0 12px rgba(241, 196, 15, 0.6)); }
-        .college-name { font-size: 1.3rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 900; display: block; margin-bottom: 8px; text-shadow: 0 0 15px rgba(241, 196, 15, 0.4); }
         
-        h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 10px; background: linear-gradient(135deg, #ffffff 0%, #f1c40f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; }
+        .college-name { 
+            font-size: 1.3rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-weight: 900; 
+            display: block; 
+            margin-bottom: 5px; 
+            text-shadow: 0 0 15px rgba(241, 196, 15, 0.4); 
+        }
+
+        /* --- THE BLINKING PRESENTS --- */
+        @keyframes professionalBlink { 
+            0%, 100% { opacity: 1; } 
+            50% { opacity: 0.1; } 
+        }
+        .presents {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--gold-accent);
+            font-style: italic;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            animation: professionalBlink 2s infinite;
+            text-transform: lowercase;
+        }
+
+        h1 { 
+            font-size: 2.8rem; 
+            font-weight: 900; 
+            margin-bottom: 10px; 
+            background: linear-gradient(135deg, #ffffff 0%, #f1c40f 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            text-transform: uppercase; 
+        }
+
         .tagline { font-size: 1rem; color: var(--text-muted); margin-bottom: 20px; letter-spacing: 1px; }
 
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .form-group { margin-bottom: 18px; text-align: left; }
-        label { display: block; margin-bottom: 6px; font-size: 0.7rem; color: var(--gold-accent); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        label { display: block; margin-bottom: 6px; font-size: 0.7rem; color: var(--gold-accent); text-transform: uppercase; font-weight: 700; }
         input, textarea { width: 100%; padding: 12px; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border); border-radius: 8px; color: #fff; font-family: inherit; font-size: 0.9rem; }
         input:focus, textarea:focus { outline: none; border-color: var(--gold-accent); box-shadow: var(--glow); }
 
-        .submit-btn { width: 100%; padding: 16px; background: var(--gold-accent); color: #000; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; text-transform: uppercase; margin-top: 10px; transition: 0.3s; }
+        .submit-btn { width: 100%; padding: 16px; background: var(--gold-accent); color: #000; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         .submit-btn:hover { background: #f39c12; transform: translateY(-2px); }
 
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(10px); }
@@ -92,6 +126,7 @@
                 <img src="https://i.ibb.co/xSCgY7Dw/Adobe-Express-file.png" alt="Logo" class="college-logo-transparent">
             </div>
             <span class="college-name">Excellence Tutors College</span>
+            <span class="presents">presents...</span>
             <h1>BEYOND JAMB</h1>
             <p class="tagline">Registration Form</p>
         </header>
@@ -145,7 +180,6 @@
         <div class="modal-content">
             <h3 style="color: var(--gold-accent); font-size: 1.8rem;">Success!</h3>
             <p style="color: white; margin: 15px 0;">Your details have been received.</p>
-            <p style="color: #ccc; font-size: 0.9rem;">Join the group for the webinar link.</p>
             <a href="https://chat.whatsapp.com/C7Kt7Mf5Cs383C8imodLat" class="whatsapp-btn">Join WhatsApp Group</a>
         </div>
     </div>
