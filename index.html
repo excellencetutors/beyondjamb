@@ -72,7 +72,6 @@
             text-shadow: 0 0 15px rgba(241, 196, 15, 0.4); 
         }
 
-        /* --- THE BLINKING PRESENTS --- */
         @keyframes professionalBlink { 
             0%, 100% { opacity: 1; } 
             50% { opacity: 0.1; } 
@@ -98,7 +97,15 @@
             text-transform: uppercase; 
         }
 
-        .tagline { font-size: 1rem; color: var(--text-muted); margin-bottom: 20px; letter-spacing: 1px; }
+        /* --- THE BRIDGE TAGLINE --- */
+        .bridge-tagline { 
+            font-size: 1rem; 
+            color: var(--text-muted); 
+            margin-bottom: 25px; 
+            letter-spacing: 1px;
+            font-style: italic;
+            display: block;
+        }
 
         .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .form-group { margin-bottom: 18px; text-align: left; }
@@ -128,7 +135,7 @@
             <span class="college-name">Excellence Tutors College</span>
             <span class="presents">presents...</span>
             <h1>BEYOND JAMB</h1>
-            <p class="tagline">Registration Form</p>
+            <span class="bridge-tagline">Bridge the gap between your scores and university admission.</span>
         </header>
 
         <form id="webinarForm">
